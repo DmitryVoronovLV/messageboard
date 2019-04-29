@@ -12,5 +12,23 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call(UsersTableSeeder::class);
+         DB::table('users')->insert([
+        'name' => 'Abuzer Yakaryilmaz',
+        'email' => 'abuzer@lu.lv',
+        'password' => bcrypt('3rdlab'),
+        ]);		
+        DB::table('countries')->insert([
+        'country_name' => 'Latvia',
+        'country_code' => 'LV',
+        ]);
+        DB::table('countries')->insert([
+        'country_name' => 'Finland',
+        'country_code' => 'FI',
+        ]);
+        DB::table('countries')->insert([
+        'country_name' => 'Brazil',
+        'country_code' => 'BR',
+        ]);
+
     }
 }
